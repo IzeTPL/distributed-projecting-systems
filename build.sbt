@@ -10,15 +10,17 @@ lazy val root = (project in file(".")).
     name := "distributed-projecting-systems",
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
-      "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-http-xml"        % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-stream"          % akkaVersion,
 
       "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,
       "com.typesafe.akka" %% "akka-testkit"         % akkaVersion     % Test,
       "com.typesafe.akka" %% "akka-stream-testkit"  % akkaVersion     % Test,
-      "org.scalatest"     %% "scalatest"            % "3.0.5"         % Test
+      "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+
+      "io.circe" %% "circe-core" % "0.12.0-M1",
+      "io.circe" %% "circe-generic" % "0.12.0-M1",
+      "io.circe" %% "circe-parser" % "0.12.0-M1"
+
     )
-  )
-  .enablePlugins(
   )
